@@ -131,21 +131,10 @@
         });
 
         var $table = $('#table');
-        var x;
+        var mydata = [{ "Jobcat": "證券", "Jobname": "櫃台行員", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "金融", "Jobname": "櫃台行員", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "工程", "Jobname": "工程師", "Location": "高雄", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "證券", "Jobname": "櫃台行員", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "證券", "Jobname": "業務", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "工程", "Jobname": "工程師", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "證券", "Jobname": "業務", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "金融", "Jobname": "櫃台行員", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "工程", "Jobname": "工程師", "Location": "高雄", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "證券", "Jobname": "櫃台行員", "Location": "台中", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "金融", "Jobname": "櫃台行員", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "證券", "Jobname": "櫃台行員", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "工程", "Jobname": "工程師", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "證券", "Jobname": "櫃台行員", "Location": "高雄", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "金融", "Jobname": "業務", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "證券", "Jobname": "櫃台行員", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "工程", "Jobname": "工程師", "Location": "高雄", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "證券", "Jobname": "櫃台行員", "Location": "台中", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "金融", "Jobname": "業務", "Location": "台北", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }, { "Jobcat": "工程", "Jobname": "工程師", "Location": "台中", "Years": 3, "Date": "2017/03/10", "Postdate": "2017/05/10" }];
         function randomData() {
-            $.ajax({
-                type: 'POST',
-                url: 'ws.asmx/getTestJobData',
-                dataType: 'json',
-                success: function (result) {
-                    x = result;
-                    if (result != null)
-                        $table.bootstrapTable('load', result);
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    alert(xhr.status);
-                    alert(thrownError);
-                }
+            $('#table').bootstrapTable('load', {
+                data: mydata
             });
         }
     </script>
