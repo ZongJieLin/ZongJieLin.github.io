@@ -1,0 +1,129 @@
+﻿html, body {
+    margin: 0;
+    height: 100%;
+    background-color: #e6e6e6;
+    overflow: hidden;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+
+.squareRow1 {
+    /*height:20%;*/
+}
+
+.squareRow2 {
+    /*background-color: rgb(51,51,51);*/
+    font-size: 20px !important;
+}
+
+.midcontentrow2 {
+    background-color: rgb(51,51,51);
+}
+
+.midcontentfooter {
+    background-color: rgb(51,51,51);
+    height: inherit;
+}
+
+.midcontent {
+    background-color: white;
+}
+
+.squareRow3 {
+    min-height: 50%;
+    /*background-color: white;*/
+}
+
+.forcesquare {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.bg-trans {
+    border: none;
+    background-color: transparent;
+}
+
+.flexbox{
+      display:flexbox;
+      align-items:center;
+      justify-content:center;
+}
+
+.rowheight100 {
+    height: 100%;
+}
+
+.rowwidth100 {
+    width: 100%;
+}
+
+.divalibottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.nav>li>.user:hover {
+    background-color: rgb(51,51,51);
+}
+
+/*.user {
+    color: #e6e6e6;
+    background-color:rgb(51,51,51);  
+}*/
+
+/*.user>a {
+    color: #e6e6e6;
+    background-color:rgb(51,51,51);  
+}*/
+
+a {
+    background-color:inherit !important;
+}
+
+.user > a:focus, a:hover {
+    color: white;
+    background-color:inherit;  
+}
+
+a.user {
+    color: #e6e6e6;
+}
+
+a.user > a:focus, a:hover {
+    color: white;
+    background-color:rgb(51,51,51); 
+}
+
+.nav .open > .user,  
+.nav .open > .user:hover,
+.nav .open > .user:focus{
+    background-color: rgb(51,51,51);    
+    color: white;
+}
+
+.lihand {
+    cursor: pointer;
+    font-size:18px;
+}
+
+.customnav {
+    color: #e6e6e6;
+    font-size: 20px;
+}
+
+.customnav > a:focus, a:hover {
+    color: white;
+    background-color: rgb(55,55,55);
+}
+
+.footer{
+    position:absolute;
+    bottom: 0px;
+    height: 70px;
+}

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-table.js"></script>
+    <script type="text/javascript" src="scripts/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-table.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Q and A</h1>
+        <table id="table"
+            data-toggle="table"
+            data-toolbar="#toolbar"
+            data-height="460"
+            data-url="">
+            <thead>
+                <tr>
+                    <th data-field="Question">Question</th>
+                    <th data-field="Answer">Answer</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            //randomData();
+        });
+
+        var $table = $('#table'),
+            $button = $('#button');
+
+        function randomData() {
+            $.ajax({
+                type: 'POST',
+                url: 'QandA.asmx/getQandA',
+                dataType: 'json',
+                data: {},
+                success: function (result) {
+                    $table.bootstrapTable('load', result);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
