@@ -69,26 +69,76 @@
                     <h4>專職職缺列表</h4>
                     <hr />
                 </div>
-                <div class="col-lg-9 col-md-9 col-xs-9 alert-info">
-                    <table id="table"
-                           data-toggle="table"
-                           data-height="460"
-                           data-pagination="true"
-                           data-url="">
-                        <thead>
-                            <tr>
-                                <th data-field="Jobcat">類別(Job category)</th>
-                                <th data-field="Jobname">職缺名稱</th>
-                                <th data-field="Location">地點</th>
-                                <th data-field="Years">年資要求</th>
-                                <th data-field="Date">截止日期</th>
-                                <th data-field="Postdate">發文日期</th>
-                            </tr>
-                        </thead>
-                    </table>
+                <div class="col-lg-10 col-md-10 col-xs-10">
+                    <div class="row form-inline">
+                        <div class="input-group col-xs-2 col-md-2" style="padding: 0; height: 100%;">
+                            <label class="input-group-addon" style="width: 4em;">類別:</label>
+                            <div id="btn_category" class="form-contorl btn-group btn-group-sm" style="width: 100%;">
+                                <ul class="dropdown-menu" style="min-width: 0; ">
+                                    <li>
+                                        <a href="#">證券</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">金融</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">工程</a>
+                                    </li>
+                                </ul>
+                                <button data-toggle="dropdown" class="form-control btn-group-sm" style="width: 100%;">
+                                    <span id="btn_categoryselect"></span>&nbsp;<span class="caret"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="input-group col-xs-2 col-md-2" style="padding: 0; height: 100%;">
+                            <label class="input-group-addon" style="width: 4em;">年資:</label>
+                            <div id="btn_years" class="form-contorl btn-group btn-group-sm" style="width: 100%;">
+                                <ul class="dropdown-menu" style="min-width: 0; width: 100%;">
+                                    <li>
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+                                </ul>
+                                <button data-toggle="dropdown" class="form-control btn-group-sm" style="width: 100%;">
+                                    <span id="btn_yearsselect"></span>&nbsp;<span class="caret"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="input-group col-xs-7 col-md-7" style="padding: 0; height: 100%;">
+                            <label class="input-group-addon" style="width: 9em;">工作內容</label>
+                            <input class="form-control " type="text" value="" id="add_username">
+                        </div>
+                        <button class="form-control btn-group-sm" style="">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </div>
+                    <div class="row" style="margin-top: 0.5em;">
+                        <table id="table"
+                               class="table table-striped"
+                               data-toggle="table"
+                               data-height="460"
+                               data-pagination="true"
+                               data-url="">
+                            <thead>
+                                <tr>
+                                    <th data-field="Jobcat" data-sortable="true">類別(Job category)</th>
+                                    <th data-field="Jobname" data-sortable="true">職缺名稱</th>
+                                    <th data-field="Location" data-sortable="true">地點</th>
+                                    <th data-field="Years" data-sortable="true">年資要求</th>
+                                    <th data-field="Date" data-sortable="true">截止日期</th>
+                                    <th data-field="Postdate" data-sortable="true">發文日期</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-xs-3">
-                    <button type="button" class="btn btn-primary pull-right" onclick="create_new_job()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增職缺</button>
+                <div class="col-lg-2 col-md-2 col-xs-2">
+                    <button type="button" class="btn btn-primary pull-right" onclick="view_jobs()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增/管理專職職缺</button>
                 </div>
 
             </div>
@@ -137,6 +187,16 @@
                 data: mydata
             });
         }
+
+        $(function () {
+            $("body").on('click', '#btn_category li a', function () {
+                $("#btn_categoryselect").text($(this).text());
+            });
+
+            $("body").on('click', '#btn_years li a', function () {
+                $("#btn_yearsselect").text($(this).text());
+            });
+        });
     </script>
 
 </body>
