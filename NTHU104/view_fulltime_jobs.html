@@ -45,7 +45,7 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle user" data-toggle="dropdown"><b>HI, 王大明</b> <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="lihand" href="./manage_posted_fulltime_job.html">管理發布專職職缺</a></li>
+                                        <li><a class="lihand" href="./view_jobs.html">管理發布專職職缺</a></li>
                                         <li><a class="lihand" href="#">管理發布兼職職缺</a></li>
                                         <li><a class="lihand" href="#">管理求職自介</a></li>
                                         <li class="divider"></li>
@@ -140,10 +140,126 @@
                 <div class="col-lg-2 col-md-2 col-xs-2">
                     <button type="button" class="btn btn-primary pull-right" onclick="view_jobs()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增/管理專職職缺</button>
                 </div>
-
             </div>
         </div>
         <div class="col-lg-2 col-md-2 col-xs-1"></div>
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog" role="document" style="height: 100%;">
+                <div class="modal-content" style="height: 50em;">
+                    <div class="modal-body">
+                        <div class="alert col-lg-12 col-md-12 col-xs-12">
+                            <div class="row">
+                                <h4>專職職缺(Full time Job Vacancies)</h4>
+                                <hr style="margin-bottom:0.5em;" />
+                                <!--<form>-->
+                                <div class="row" style="width: 100%; margin: 0;">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">職缺名稱(Job title)*</label>
+                                            <input class="form-control " type="text" value="程式設計工程師" id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="width: 100%; margin: 1em 0 0 0;">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">職缺類別(Category)*</label>
+                                            <input class="form-control " type="text" value="工程師" id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="width: 100%; margin: 1em 0 0 0; ">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">公司名稱(Company/Employer)*</label>
+                                            <input class="form-control " type="text" value="川普" id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="width: 100%; margin: 1em 0 0 0;">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">工作地點(Location)*</label>
+                                            <input class="form-control " type="text" value="川普大樓" id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="width: 100%; margin: 1em 0 0 0; ">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">工作內容(Job description)*</label>
+                                            <input class="form-control " type="text" value="撰寫預測總統大選程式 需要加班 提供免費wifi" id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="width: 100%; margin: 1em 0 0 0;">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">年資要求(Experience requirced)*</label>
+                                            <input class="form-control " type="text" value="3" id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="width: 100%; margin: 1em 0 0 0; ">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">截止日期(Application closing  date)*</label>
+                                            <input class="form-control " type="text" value="2016/12/31 " id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="width: 100%; margin: 1em 0 0 0;">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">聯絡方式(Contact info)*</label>
+                                            <input class="form-control " type="text" value="0988123456 楊先生" id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="width: 100%; margin: 1em 0 0 0; ">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">需求技能/證照(Required skills/licence)</label>
+                                            <input class="form-control " type="text" value="c++/c" id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="width: 100%; margin: 1em 0 0 0;">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">薪水(月薪/年薪)Salary</label>
+                                            <input class="form-control " type="text" value="800k per 1 year" id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="width: 100%; margin: 1em 0 0 0; ">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">公司資訊(Job info)</label>
+                                            <input class="form-control " type="text" value="" id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="width: 100%; margin: 1em 0 0 0; ">
+                                    <div class="col-xs-12 col-md-12" style="height: 100%; padding-left: 0;">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon " style="width: 20em;">其他資訊(others) Max 500 char</label>
+                                            <input class="form-control " type="text" value="" id="node_mac" readonly="readonly" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin: 0.5em 0 0 0;">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-primary" data-dismiss="modal" style="float: right;">確認(OK)</button>
+                                    </div>
+                                </div>
+                                <!--</form>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-lg-12 col-md-12 col-xs-12 footer">
         <div class="col-lg-2 col-md-2 col-xs-1"></div>
@@ -176,6 +292,9 @@
         function logout() {
             window.location.replace("login.html");
         }
+        function view_fulltime_jobs() {
+            window.location.replace("view_fulltime_jobs.html");
+        }
         $(document).ready(function () {
             randomData();
         });
@@ -196,7 +315,13 @@
             $("body").on('click', '#btn_years li a', function () {
                 $("#btn_yearsselect").text($(this).text());
             });
+
+            $table.on('click-row.bs.table', function (e, arg1, arg2) {
+                $('#myModal').modal('show')
+            });
         });
+
+
     </script>
 
 </body>
