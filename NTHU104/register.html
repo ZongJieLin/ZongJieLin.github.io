@@ -1,20 +1,31 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>註冊Register</title>
     <script type="text/javascript" src="scripts/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
 
     <script type="text/javascript">
-        function editProfile() {
-            window.location.replace("setting.html");
-        }
-        function logout() {
-            window.location.replace("login.html");
-        }
+    $(document).ready(function(){
+        $('sandbox-container .input-group.date').datepicker({
+            clearBtn: true,
+            keyboardNavigation: false,
+            forceParse: false,
+            defaultViewDate: { year: 1977, month: 04, day: 25 }
+        });
+
+    });
+    function editProfile() {
+        window.location.replace("setting.html");
+    }
+    function logout() {
+        window.location.replace("login.html");
+    }
     </script>
 </head>
 <body>
@@ -83,73 +94,80 @@
                             <span class="input-group-addon" id="identity">身份</span>
                             <div class="input-group-btn rowwidth100">
                                 <button type="button" class="btn btn-default dropdown-toggle rowwidth100" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false" style="text-align:right;">
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-right" style="width: 100%;">
-                                    <li><a href="#">在校生</a></li>
-                                    <li><a href="#">校友</a></li>
-                                    <li><a href="#">教職員</a></li>
-                                    <li><a href="#">貴賓</a></li>
-                                </ul>
+                                aria-expanded="false" style="text-align:right;">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right" style="width: 100%;">
+                                <li><a href="#">在校生</a></li>
+                                <li><a href="#">校友</a></li>
+                                <li><a href="#">教職員</a></li>
+                                <li><a href="#">貴賓</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="input-group" style="width: 100%;">
+                        <span class="input-group-addon" id="ID" style="width: 40%;">身份證字號(ID)</span>
+                        <input type="text" class="form-control" placeholder="ID" aria-describedby="basic-addon1" />
+                    </div>
+                </div>
+                <br />
+
+                <div class="row">
+                    <div class="input-group" style="width: 100%;">
+                        <div class="input-group date" data-provide="datepicker">
+                            <span class="input-group-addon" id="BD" style="width: 40%;">生日(birthday)</span>
+                            <input type="text" class="form-control">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th"></span>
                             </div>
                         </div>
                     </div>
-                    <br />
-                    <div class="row">
-                        <div class="input-group" style="width: 100%;">
-                            <span class="input-group-addon" id="ID" style="width: 40%;">身份證字號(ID)</span>
-                            <input type="text" class="form-control" placeholder="ID" aria-describedby="basic-addon1" />
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="input-group" style="width: 100%;">
-                            <span class="input-group-addon" id="BD" style="width: 40%;">生日(birthday)</span>
-                            <input type="text" class="form-control" placeholder="birthday" aria-describedby="basic-addon1" />
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="input-group" style="width: 100%;">
-                            <span class="input-group-addon" id="E-Mail" style="width: 40%;">電子信箱(E-Mail)</span>
-                            <input type="text" class="form-control" placeholder="e-mail" aria-describedby="basic-addon1" />
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="input-group" style="width: 100%;">
-                            <span class="input-group-addon" id="PW" style="width: 40%;">密碼(password)</span>
-                            <input type="text" class="form-control" placeholder="password" aria-describedby="basic-addon1" />
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="input-group" style="width: 100%;">
-                            <span class="input-group-addon" id="PWCF" style="width: 40%;">密碼再確認(confirm)</span>
-                            <input type="text" class="form-control" placeholder="password confirm" aria-describedby="basic-addon1" />
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <button class="btn btn-primary" id="btn_submit" onclick="logout()" style="float: right;">送出(submit)</button>
+                </div>
+
+                <br />
+                <div class="row">
+                    <div class="input-group" style="width: 100%;">
+                        <span class="input-group-addon" id="E-Mail" style="width: 40%;">電子信箱(E-Mail)</span>
+                        <input type="text" class="form-control" placeholder="e-mail" aria-describedby="basic-addon1" />
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-xs-1"></div>
+                <br />
+                <div class="row">
+                    <div class="input-group" style="width: 100%;">
+                        <span class="input-group-addon" id="PW" style="width: 40%;">密碼(password)</span>
+                        <input type="text" class="form-control" placeholder="password" aria-describedby="basic-addon1" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="input-group" style="width: 100%;">
+                        <span class="input-group-addon" id="PWCF" style="width: 40%;">密碼再確認(confirm)</span>
+                        <input type="text" class="form-control" placeholder="password confirm" aria-describedby="basic-addon1" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <button class="btn btn-primary" id="btn_submit" onclick="logout()" style="float: right;">送出(submit)</button>
+                </div>
             </div>
+            <div class="col-lg-3 col-md-3 col-xs-1"></div>
         </div>
-        <div class="col-lg-2 col-md-2 col-xs-1"></div>
     </div>
-    <div class="col-lg-12 col-md-12 col-xs-12 footer">
-        <div class="col-lg-2 col-md-2 col-xs-1"></div>
-        <div class="col-lg-8 col-md-8 col-xs-10 midcontentfooter" style="color: white; text-align: center;">
-            © 2016 All Rights Reserved | Design by SML
-            <address style="color: white; text-align: center;">
-                30013 新竹市光復路二段101號
-                <a href="mailto:#">ctm-career@list.net.nthu.edu.tw</a> <abbr title="Phone">Phone:</abbr>03-5715131 #12345
-            </address>
-        </div>
-        <div class="col-lg-2 col-md-2 col-xs-1"></div>
+    <div class="col-lg-2 col-md-2 col-xs-1"></div>
+</div>
+<div class="col-lg-12 col-md-12 col-xs-12 footer">
+    <div class="col-lg-2 col-md-2 col-xs-1"></div>
+    <div class="col-lg-8 col-md-8 col-xs-10 midcontentfooter" style="color: white; text-align: center;">
+        © 2016 All Rights Reserved | Design by SML
+        <address style="color: white; text-align: center;">
+            30013 新竹市光復路二段101號
+            <a href="mailto:#">ctm-career@list.net.nthu.edu.tw</a> <abbr title="Phone">Phone:</abbr>03-5715131 #12345
+        </address>
     </div>
+    <div class="col-lg-2 col-md-2 col-xs-1"></div>
+</div>
 </body>
 </html>
