@@ -26,6 +26,9 @@
     function logout() {
         window.location.replace("login.html");
     }
+    function register_ok() {
+        window.location.replace("register_ok.html");
+    }
     </script>
 </head>
 <body>
@@ -50,10 +53,10 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand customnav" href="./view_fulltime_jobs.html" style="height:auto;">專職職缺<br />(Full time)</a>
+                                <!-- <a class="navbar-brand customnav" href="./view_fulltime_jobs.html" style="height:auto;">專職職缺<br />(Full time)</a>
                                 <a class="navbar-brand customnav" href="#">實習兼職職缺<br />(Intern/Part time)</a>
                                 <a class="navbar-brand customnav" href="#">求職自介<br />(Resume)</a>
-                                <a class="navbar-brand customnav" href="#">校友活動訊息<br />(Activities)</a>
+                                <a class="navbar-brand customnav" href="#">校友活動訊息<br />(Activities)</a> -->
                             </div>
                         </div>
                     </div>
@@ -61,7 +64,7 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle user" data-toggle="dropdown"><b>HI, 王大明</b> <span class="caret"></span></a>
+                                    <a href="#" class="dropdown-toggle user" data-toggle="dropdown"><b> </b> </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="lihand" href="./manage_posted_fulltime_job.html">管理發布專職職缺</a></li>
                                         <li><a class="lihand" href="#">管理發布兼職職缺</a></li>
@@ -84,7 +87,7 @@
         <div class="col-lg-8 col-md-8 col-xs-10 midcontent rowheight100" id="container">
             <div class="alert col-lg-12 col-md-12 col-xs-12">
                 <div class="row">
-                    <h4>註冊</h4>
+                    <h3><b>註冊(Register)</b></h3>
                     <hr />
                 </div>
                 <div class="col-lg-3 col-md-3 col-xs-1"></div>
@@ -117,7 +120,7 @@
 
                 <div class="row">
                     <div class="input-group" style="width: 100%;">
-                        <span class="input-group-addon" id="BD" style="width: 40%;">生日(birthday)</span>
+                        <span class="input-group-addon" id="BD" style="width: 40%;">生日(Birthday)</span>
                         <div class="input-group date" data-provide="datepicker">
                             <input type="text" class="form-control">
                             <div class="input-group-addon">
@@ -131,26 +134,26 @@
                 <div class="row">
                     <div class="input-group" style="width: 100%;">
                         <span class="input-group-addon" id="E-Mail" style="width: 40%;">電子信箱(E-Mail)</span>
-                        <input type="text" class="form-control" placeholder="e-mail" aria-describedby="basic-addon1" />
+                        <input type="email" class="form-control" placeholder="e-mail" aria-describedby="basic-addon1" />
                     </div>
                 </div>
                 <br />
                 <div class="row">
                     <div class="input-group" style="width: 100%;">
                         <span class="input-group-addon" id="PW" style="width: 40%;">密碼(password)</span>
-                        <input type="text" class="form-control" placeholder="password" aria-describedby="basic-addon1" />
+                        <input type="password" class="form-control" placeholder="password" aria-describedby="basic-addon1" />
                     </div>
                 </div>
                 <br />
                 <div class="row">
                     <div class="input-group" style="width: 100%;">
                         <span class="input-group-addon" id="PWCF" style="width: 40%;">密碼再確認(confirm)</span>
-                        <input type="text" class="form-control" placeholder="password confirm" aria-describedby="basic-addon1" />
+                        <input type="password" class="form-control" placeholder="password confirm" aria-describedby="basic-addon1" />
                     </div>
                 </div>
                 <br />
                 <div class="row">
-                    <button class="btn btn-primary" id="btn_submit" onclick="logout()" style="float: right;">送出(submit)</button>
+                    <button class="btn btn-primary" id="btn_submit" onclick="register_ok()" style="float: right;">送出(submit)</button>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-xs-1"></div>
@@ -158,16 +161,18 @@
     </div>
     <div class="col-lg-2 col-md-2 col-xs-1"></div>
 </div>
-<div class="col-lg-12 col-md-12 col-xs-12 footer">
-    <div class="col-lg-2 col-md-2 col-xs-1"></div>
-    <div class="col-lg-8 col-md-8 col-xs-10 midcontentfooter" style="color: white; text-align: center;">
-        © 2016 All Rights Reserved | Design by SML
-        <address style="color: white; text-align: center;">
-            30013 新竹市光復路二段101號
-            <a href="mailto:#">ctm-career@list.net.nthu.edu.tw</a> <abbr title="Phone">Phone:</abbr>03-5715131 #12345
-        </address>
+<div id="footer">
+    <div class="col-lg-12 col-md-12 col-xs-12 footer">
+        <div class="col-lg-2 col-md-2 col-xs-1"></div>
+        <div class="col-lg-8 col-md-8 col-xs-10 midcontentfooter" style="color: white; text-align: center;">
+            © 2016 All Rights Reserved | Design by SML
+            <address style="color: white; text-align: center;">
+                30013 新竹市光復路二段101號
+                <a href="mailto:#">ctm-career@list.net.nthu.edu.tw</a> <abbr title="Phone">Phone:</abbr>03-5715131 #12345
+            </address>
+        </div>
+        <div class="col-lg-2 col-md-2 col-xs-1"></div>
     </div>
-    <div class="col-lg-2 col-md-2 col-xs-1"></div>
 </div>
 </body>
 </html>

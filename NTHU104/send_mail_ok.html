@@ -17,8 +17,8 @@
             window.location.replace("setting.html");
         }
 
-        function send_mail_ok() {
-            window.location.replace("send_mail_ok.html");
+        function back_to_login() {
+            window.location.replace("login.html");
         }
     </script>
 </head>
@@ -55,7 +55,7 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle user" data-toggle="dropdown"><b> </b></a>
+                                    <a href="#" class="dropdown-toggle user" data-toggle="dropdown"><b> </b> </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="lihand" href="./manage_posted_fulltime_job.html">管理發布專職職缺</a></li>
                                         <li><a class="lihand" href="#">管理發布兼職職缺</a></li>
@@ -83,17 +83,11 @@
                 </div>
                 <div class="col-lg-2 col-md-2 col-xs-1"></div>
                 <div class="col-lg-8 col-md-8 col-xs-10">
-                    <h3>請輸入註冊時所使用的信箱，我們將會寄送重設密碼連結至信箱。
-                        <br/ >(Please enter the email address you used for registration, we will send a reset password link to you mailbox.)</h3>
+                    <h3>已將密碼設定連結寄送至信箱，請至信箱檢查<br />
+                        The link of password reset has been sent to your email adress.   Please check your mailbox.
+                    </h3>
                     <br />
-                    <div class="row">
-                        <div class="input-group" style="width: 100%;">
-                            <span class="input-group-addon" id="account" style="width: 20%;">信箱(E-Mail)</span>
-                            <input type="text" class="form-control" placeholder="E-Mail" aria-describedby="basic-addon1" />
-                        </div>
-                    </div>
-                    <br />
-                    <button class="btn-sm btn-primary" id="Button1" style="float: right;" onclick="send_mail_ok()">確認(OK)</button>
+                    <button class="btn-sm btn-primary" id="Button1" style="float: right;" onclick="back_to_login()">確認(OK)</button>
                 </div>
 
                 <div class="col-lg-2 col-md-2 col-xs-1"></div>
